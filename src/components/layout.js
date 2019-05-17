@@ -11,7 +11,7 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <Img fixed={image} >
+        <Img fluid={image} >
           <Link
             style={{
               boxShadow: `none`,
