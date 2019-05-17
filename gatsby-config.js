@@ -4,11 +4,19 @@ module.exports = {
     author: `Xiangdong Zhang`,
     description: `The collection of useful articles.`,
     siteUrl: `https://gctechdigest.netlify.com/`,
+    headerImg:`techdigest.png`,
     social: {
       twitter: `@zhangxd6`,
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/imgs`,
+      },
+    },
     {
       resolve: "gatsby-source-azure-storage",
       options:{

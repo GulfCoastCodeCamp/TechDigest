@@ -1,23 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Img from "gatsby-image"
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children,image } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
+        <Img fixed={image} >
           <Link
             style={{
               boxShadow: `none`,
@@ -28,7 +22,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-        </h1>
+        </Img>
       )
     } else {
       header = (
