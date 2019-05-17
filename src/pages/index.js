@@ -33,7 +33,7 @@ class BlogIndex extends React.Component {
       <Layout
         location={this.props.location}
         title={siteTitle}
-        image={data.file.childImageSharp.fixed}
+        image={data.file.childImageSharp.fluid}
       >
         <SEO
           title={siteTitle}
@@ -81,8 +81,8 @@ export const pageQuery = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 600, height: 200) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 600, maxHeight: 200) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
