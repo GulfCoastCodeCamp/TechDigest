@@ -11,6 +11,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-140407374-1",
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
